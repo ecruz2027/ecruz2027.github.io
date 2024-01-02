@@ -113,29 +113,9 @@
         height: 100%;
         object-fit: cover;
     }   
-    .container{
-        overflow: visible;
-    }
-
-    .swiper-container{
-        position: relative;
-        touch-action: none;
-    }
-
-    .swiper-wrapper {
-        backface-visibility: visible;
-    }
         
-    @media (min-width: 390px) and (max-width: 768px;) {    
+   @media (max-width: 600px;) {    
         .container {
-            overflow: hidden;
-        }
-
-        body {
-            overflow-x: hidden;
-        }
-
-        .swiper-container {
             overflow: hidden;
         }
 
@@ -604,11 +584,6 @@
             spaceBetween: 30,
             centeredSlides: true,
             loop: true,
-            effect: 'fade', // Set the transition effect to 'fade'
-            fadeEffect: {
-                crossFade: true
-            },
-            speed: 0,
 
             pagination: {
                 el: '.swiper-pagination',
