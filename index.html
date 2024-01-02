@@ -109,10 +109,13 @@
     }
 
     .carousel-pic {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }   
+      display: none;
+      width: 100%; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+    .swiper-slide-active .carousel-pic {
+      display: block;
+    }  
 
     .swiper-pagination-bullet {
         background-color: #ffffff;
@@ -391,34 +394,34 @@
     </nav>
  
     <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-10">
-                <div class="swiper-container" style="height: 500px;">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="acad1.jpg" class="carousel-pic" alt="...">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="acad2.jpg" class="carousel-pic" alt="...">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="acad3outside.jpg" class="carousel-pic" alt="...">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="acad3.jpg" class="carousel-pic" alt="...">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="grh.jpg" class="carousel-pic" alt="...">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="cross.jpg" class="carousel-pic" alt="...">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>                        
-            </div>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="swiper-container" style="height: 500px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="acad1.jpg" class="carousel-pic" alt="...">
+          </div>
+          <div class="swiper-slide">
+            <img src="acad2.jpg" class="carousel-pic" alt="...">
+          </div>
+          <div class="swiper-slide">
+            <img src="acad3outside.jpg" class="carousel-pic" alt="...">
+          </div>
+          <div class="swiper-slide">
+            <img src="acad3.jpg" class="carousel-pic" alt="...">
+          </div>
+          <div class="swiper-slide">
+            <img src="grh.jpg" class="carousel-pic" alt="...">
+          </div>
+          <div class="swiper-slide">
+            <img src="cross.jpg" class="carousel-pic" alt="...">
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
+  </div>
+</div>
 
     <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;">
         <iframe src="https://streamable.com/e/4rvik3?autoplay=1" width="100" height="100" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe>
@@ -617,6 +620,12 @@
         });
 
     </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    // Add any Swiper configuration options here
+  });
+</script>
 </body>
 
 </html>
