@@ -107,21 +107,21 @@
         position: absolute;
         margin-top: -100px;
     }
-
-    .container {
-        overflow: hidden;
-    }
-
-    .swiper-wrapper {
-      backface-visibility: hidden;
-    }
         
     .carousel-pic {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }   
+    @media (max-width: 600px;) {    
+        .container {
+            overflow: hidden;
+        }
 
+        .swiper-wrapper {
+          backface-visibility: hidden;
+        }
+    }
     .swiper-pagination-bullet {
         background-color: #ffffff;
         border: solid 10px #fff;
