@@ -417,7 +417,7 @@
   <div class="container mt-3">
             <div class="row">
                 <div class="col-md-10">
-                    <div class="swiper-container" style="height: 500px;">
+                    <div class="swiper-container" style="height: 500px;" id="mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="acad1.jpg" class="carousel-pic" alt="...">
@@ -640,6 +640,13 @@
             });
         });
 
+    </script>
+    <script>
+        var mySwiper = new Swiper('#mySwiper', {
+            zoom: {
+                maxRatio: 1,
+            },
+        });
     </script>
 </body>
 
