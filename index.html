@@ -597,59 +597,57 @@
 
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        effect: 'fade',
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            effect: 'fade', // Set the transition effect to 'fade'
             fadeEffect: {
                 crossFade: true
             },
-
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        preloadImages: true
-    });
-
-    swiper.on('slideChange', function () {
-        swiper.update();
-        swiper.updateSize();
-    });
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            preloadImages: true
         });
 
-        $(document).ready(function() {
-            $('.image-row').each(function() {
-                var container = $(this);
-                var lastScrollTop = 0;
+        swiper.on('slideChange', function () {
+            swiper.update();
+            swiper.updateSize();
+        });
+    });
 
-                $(window).scroll(function() {
-                    var scrollTop = $(this).scrollTop();
-                    var rowTop = container.offset().top;
-                    var windowHeight = $(window).height();
+    $(document).ready(function () {
+        $('.image-row').each(function () {
+            var container = $(this);
+            var lastScrollTop = 0;
 
-                    if (scrollTop > lastScrollTop && scrollTop > rowTop - windowHeight && scrollTop < rowTop + container.height()) {
-                        container.removeClass('transition-up');
-                    } else if (scrollTop < lastScrollTop && scrollTop > rowTop - windowHeight && scrollTop < rowTop + container.height()) {
-                        container.removeClass('transition-up');
-                    } else {
-                        container.addClass('transition-up');
-                    }
+            $(window).scroll(function () {
+                var scrollTop = $(this).scrollTop();
+                var rowTop = container.offset().top;
+                var windowHeight = $(window).height();
 
-                    lastScrollTop = scrollTop;
-                });
+                if (scrollTop > lastScrollTop && scrollTop > rowTop - windowHeight && scrollTop < rowTop + container.height()) {
+                    container.removeClass('transition-up');
+                } else if (scrollTop < lastScrollTop && scrollTop > rowTop - windowHeight && scrollTop < rowTop + container.height()) {
+                    container.removeClass('transition-up');
+                } else {
+                    container.addClass('transition-up');
+                }
+
+                lastScrollTop = scrollTop;
             });
         });
-
-    </script>
+    });
+</script>
 </body>
 
 </html>
